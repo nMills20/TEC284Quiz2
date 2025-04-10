@@ -16,3 +16,8 @@ def update_led():
     g = 1 if green_button.is_pressed else 0
     b = 1 if blue_button.is_pressed else 0
     led.color = (r,g,b)
+    
+#create loop
+while True:
+    update_led()
+    time.sleep(0.1)
