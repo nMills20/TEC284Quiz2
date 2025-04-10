@@ -6,9 +6,9 @@ from gpiozero import RGBLED, Button
 led = RGBLED (red = 5, green = 6, blue = 26)
 
 #set up buttons
-red_button = Button(17)
+red_button = Button(22)
 green_button = Button(27)
-blue_button = Button(22)
+blue_button = Button(17)
 
 #function for LED color
 def update_led():
@@ -17,7 +17,7 @@ def update_led():
     b = 1 if blue_button.is_pressed else 0
     led.color = (r,g,b)
     
-#create loop
+#create loop for update_led function
 while True:
     update_led()
     time.sleep(0.1)
